@@ -1,0 +1,245 @@
+:root {
+  font-size: 62.5%;
+  /* -----VARIABLES---- */
+  --hue: 244;
+  --portfolio-color: hsl(var(--hue), 14%, 15%);
+  --container-color: hsl(var(--hue), 13%, 21%);
+  --text-color: hsl(calc(var(--hue) + 5), 15%, 56%);
+  --technology-color: hsl(327, 35%, 68%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--portfolio-color);
+
+  font-family: 'Merriweather Sans', sans-serif;
+
+  overflow: overlay;
+
+  display: flex;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+h2,
+h3,
+p {
+  color: var(--text-color);
+}
+
+h2 {
+  font-weight: 700;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+}
+
+.card {
+  padding: 3rem;
+  background-color: var(--container-color);
+  border-radius: 15px;
+  box-shadow: 1px 1px hsl(244, 13%, 8%);
+}
+
+/* -----------PROFILE-BAR--------------------- */
+#profileBar {
+  height: auto;
+  flex: 25vw;
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+#profileBar #profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#profileBar #profile img {
+  border: 2px solid #00ff00;
+
+  width: 12.8rem;
+  height: 12.8rem;
+  border-radius: 100%;
+
+  margin-bottom: 3rem;
+}
+
+#profileBar #profile h2 {
+  font-size: 2.3rem;
+  line-height: 2.9rem;
+
+  margin-bottom: 1rem;
+}
+
+#profileBar #profile p {
+  margin-bottom: 1rem;
+}
+
+#profileBar #contacts ul {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 2rem;
+  list-style: none;
+}
+
+#profileBar #contacts ul li {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#profileBar #technologies {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#profileBar #technologies h2 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+#profileBar #technologies ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+
+  list-style: none;
+}
+
+#profileBar #technologies .technology {
+  font-weight: 700;
+  font-size: 1rem;
+
+  padding-block: 0.6rem;
+  background-color: var(--technology-color);
+  border-radius: 15px;
+
+  text-align: center;
+}
+
+#profileBar #experiences h2 {
+  margin-bottom: 2rem;
+}
+
+#profileBar #education h2 {
+  margin-bottom: 2rem;
+}
+
+#profileBar #education ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* -----------PROJECTS-BAR------------------ */
+#projectsBar {
+  height: auto;
+  width: auto;
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+#projectsBar #myProjects {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#projectsBar #myProjects h2 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+#projectsBar #myProjects a {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+
+  color: var(--text-color);
+}
+
+#projectsBar #projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+#projectsBar #projects .card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#projectsBar #projects .card .title {
+  display: flex;
+  gap: 1rem;
+
+  align-items: center;
+}
+
+#projectsBar #projects .card .content {
+  display: flex;
+  gap: 1rem;
+
+  align-items: center;
+}
+
+#projectsBar #projects .card .info {
+  display: flex;
+  gap: 1rem;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+#projectsBar #projects .card .info .feedback {
+  display: flex;
+  gap: 2rem;
+}
+
+#projectsBar #projects .card .info .feedback .like,
+#projectsBar #projects .card .info .feedback .git {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#projectsBar #projects .card .info .technology {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#projectsBar #projects .card .info .technology::before {
+  content: '';
+  width: 1rem;
+  height: 1rem;
+  background-color: hsla(55, 70%, 69%, 1);
+  border: 1px solid var(--text-color);
+  border-radius: 100%;
+}
